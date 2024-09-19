@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchardCore.Users</name>
+    </assembly>
+    <members>
+        <member name="M:OrchardCore.Users.Controllers.ControllerExtensions.RegisterUser(Microsoft.AspNetCore.Mvc.Controller,OrchardCore.Users.Models.RegisterUserForm,System.String,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Returns the created user, otherwise returns null.
+            </summary>
+            <param name="controller"></param>
+            <param name="model"></param>
+            <param name="confirmationEmailSubject"></param>
+            <param name="logger"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OrchardCore.Users.Deployment.AllUsersDeploymentStep">
+            <summary>
+            Adds users to a <see cref="T:OrchardCore.Deployment.DeploymentPlanResult"/>.
+            </summary>
+        </member>
+        <member name="T:OrchardCore.Users.GraphQL.CurrentUserQuery">
+            <summary>
+            Registers the current user including its custom user settings as a query.
+            </summary>
+        </member>
+        <member name="T:OrchardCore.Users.Localization.Models.UserLocalizationSettings">
+            <summary>
+            Provides a model for the IEntity property.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Users.Models.IdentityUserSettings.AllowedUserNameCharacters">
+            <summary>
+            The list of allowed characters in the username used to validate user names.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Users.Models.IdentityUserSettings.RequireUniqueEmail">
+            <summary>
+            Gets or sets a flag indicating whether the application requires unique emails
+            for its users. Defaults to false.
+            </summary>
+        </member>
+        <member name="T:OrchardCore.Users.Recipes.CustomUserSettingsStep">
+            <summary>
+            This recipe step updates the custom user settings.
+            </summary>
+        </member>
+        <member name="T:OrchardCore.Users.Services.SetupEventHandler">
+            <summary>
+            During setup, creates the admin user account.
+            </summary>
+        </member>
+        <member name="T:OrchardCore.Users.Services.UsersThemeSelector">
+            <summary>
+            Provides the theme defined in the site configuration for the current scope (request).
+            This selector provides AdminTheme as default or fallback for Account for Registration,
+            ResetPassword, TwoFactorAuthentication, SmsAuthenticator and AuthenticatorApp
+            controllers based on SiteSettings.
+            The same <see cref="T:OrchardCore.DisplayManagement.Theming.ThemeSelectorResult"/> is returned if called multiple times
+            during the same scope.
+            </summary>
+        </member>
+        <member name="T:OrchardCore.Users.TimeZone.Services.IUserTimeZoneService">
+            <summary>
+            Represents a service that responsible for managing the user's time zone settings.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Users.TimeZone.Services.IUserTimeZoneService.GetAsync(OrchardCore.Users.IUser)">
+            <summary>
+            Gets the time zone for the given user.
+            </summary>
+            <param name="user">The <see cref="T:OrchardCore.Users.IUser"/>.</param>
+        </member>
+        <member name="M:OrchardCore.Users.TimeZone.Services.IUserTimeZoneService.UpdateAsync(OrchardCore.Users.IUser)">
+            <summary>
+            Updates the time zone for the given user.
+            </summary>
+            <param name="user">The <see cref="T:OrchardCore.Users.IUser"/>.</param>
+        </member>
+        <member name="T:OrchardCore.Users.TimeZone.Services.UserTimeZoneSelector">
+            <summary>
+            Provides the timezone defined for the currently logged-in user for the current scope (request).
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Users.TimeZone.Services.UserTimeZoneService.GetAsync(OrchardCore.Users.IUser)">
+            <inheritdoc/>
+        </member>
+        <member name="M:OrchardCore.Users.TimeZone.Services.UserTimeZoneService.UpdateAsync(OrchardCore.Users.IUser)">
+            <inheritdoc/>
+        </member>
+        <member name="M:OrchardCore.Users.TimeZone.Services.UserTimeZoneService.GetTimeZoneIdAsync(OrchardCore.Users.IUser)">
+            <inheritdoc/>
+        </member>
+        <member name="P:OrchardCore.Users.ViewModels.EditUserViewModel.IsEditingDisabled">
+            <summary>
+            When a user only has rights to view they cannot update this model.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Users.Workflows.Activities.UserActivity.User">
+            <summary>
+            An expression that evaluates to an <see cref="P:OrchardCore.Users.Workflows.Activities.UserActivity.User"/> item.
+            </summary>
+        </member>
+        <member name="T:OrchardCore.Liquid.LiquidUserAccessor">
+            <summary>
+            This is a placeholder class that allows modules to extend the `User` property in the current Liquid scope.
+            </summary>
+        </member>
+    </members>
+</doc>

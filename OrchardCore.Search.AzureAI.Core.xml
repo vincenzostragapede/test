@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchardCore.Search.AzureAI.Core</name>
+    </assembly>
+    <members>
+        <member name="M:OrchardCore.Search.AzureAI.AzureAISearchIndexNamingHelper.TryGetSafeIndexName(System.String,System.String@)">
+            <summary>
+            Makes sure that the index names are compliant with Azure AI Search specifications.
+            <see href="https://learn.microsoft.com/en-us/rest/api/searchservice/naming-rules"/>.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Search.AzureAI.IAzureAISearchIndexEvents.RemovingAsync(OrchardCore.Search.AzureAI.Models.AzureAISearchIndexRemoveContext)">
+            <summary>
+            This event is invoked before removing an existing that already exists. 
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Search.AzureAI.IAzureAISearchIndexEvents.RemovedAsync(OrchardCore.Search.AzureAI.Models.AzureAISearchIndexRemoveContext)">
+            <summary>
+            This event is invoked after the index is removed.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Search.AzureAI.IAzureAISearchIndexEvents.RebuildingAsync(OrchardCore.Search.AzureAI.Models.AzureAISearchIndexRebuildContext)">
+            <summary>
+            This event is invoked before the index is rebuilt.
+            If the rebuild deletes the index and create a new one, other events like Removing, Removed, Creating, or Created should not be invoked.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Search.AzureAI.IAzureAISearchIndexEvents.RebuiltAsync(OrchardCore.Search.AzureAI.Models.AzureAISearchIndexRebuildContext)">
+            <summary>
+            This event is invoked after the index is rebuilt.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Search.AzureAI.IAzureAISearchIndexEvents.CreatingAsync(OrchardCore.Search.AzureAI.Models.AzureAISearchIndexCreateContext)">
+            <summary>
+            This event is invoked before the index is created.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:OrchardCore.Search.AzureAI.IAzureAISearchIndexEvents.CreatedAsync(OrchardCore.Search.AzureAI.Models.AzureAISearchIndexCreateContext)">
+            <summary>
+            This event is invoked after the index is created.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Search.AzureAI.Services.AzureAISearchIndexSettingsService.LoadDocumentAsync">
+            <summary>
+            Loads the index settings document from the store for updating and that should not be cached.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Search.AzureAI.Services.AzureAISearchIndexSettingsService.GetDocumentAsync">
+            <summary>
+            Gets the index settings document from the cache for sharing and that should not be updated.
+            </summary>
+        </member>
+    </members>
+</doc>

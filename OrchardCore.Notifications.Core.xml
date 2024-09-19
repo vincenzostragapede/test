@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchardCore.Notifications.Core</name>
+    </assembly>
+    <members>
+        <member name="P:OrchardCore.Notifications.Indexes.NotificationIndex.Content">
+            <summary>
+            The Content column should only be used to search the content of a notification.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Notifications.Indexes.NotificationIndexProvider.GetHtmlBlockRegex">
+            <remarks>
+            Pattern:<br/>
+            <code>&lt;.*?&gt;</code><br/>
+            Options:<br/>
+            <code>RegexOptions.Compiled</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match '&lt;'.<br/>
+            ○ Match a character other than '\n' lazily any number of times.<br/>
+            ○ Match '&gt;'.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="P:OrchardCore.Notifications.Models.NotificationBodyInfo.TextBody">
+            <summary>
+            The text body of the notification.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Notifications.Models.NotificationBodyInfo.HtmlBody">
+            <summary>
+            The HTML body of the notification.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Notifications.Models.NotificationOptions.TotalUnreadNotifications">
+            <summary>
+            The number of unread notifications to show in the navbar.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Notifications.Models.NotificationOptions.DisableNotificationHtmlBodySanitizer">
+            <summary>
+            Whether or not to disable HtmlBody Sanitizer.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Notifications.Models.NotificationOptions.AbsoluteCacheExpirationSeconds">
+            <summary>
+            Gets or sets an absolute expiration time, relative to now.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Notifications.Models.NotificationOptions.SlidingCacheExpirationSeconds">
+            <summary>
+            Gets or sets how long a cache entry can be inactive (e.g. not accessed) before it will be removed.
+            This will not extend the entry lifetime beyond the absolute expiration (if set in <see cref="P:OrchardCore.Notifications.Models.NotificationOptions.AbsoluteCacheExpirationSeconds" />).
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Notifications.Models.NotificationReadInfo.IsRead">
+            <summary>
+            Whether or not the notification is read.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Notifications.Models.NotificationReadInfo.ReadAtUtc">
+            <summary>
+            The date and time when the notification was read.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Notifications.Models.UserNotificationPreferencesPart.Methods">
+            <summary>
+            Sorted methods.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Notifications.Models.UserNotificationPreferencesPart.Optout">
+            <summary>
+            List of methods the user does not want to use.
+            </summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.GetHtmlBlockRegex_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the GetHtmlBlockRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.GetHtmlBlockRegex_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.GetHtmlBlockRegex_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.GetHtmlBlockRegex_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.GetHtmlBlockRegex_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.GetHtmlBlockRegex_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.GetHtmlBlockRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.GetHtmlBlockRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.GetHtmlBlockRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+    </members>
+</doc>

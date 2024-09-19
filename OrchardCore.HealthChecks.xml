@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchardCore.HealthChecks</name>
+    </assembly>
+    <members>
+        <member name="T:OrchardCore.HealthChecks.Models.HealthCheckEntry">
+            <summary>
+            Represents a health check entry for each health provider that could be displayed in the <see cref="T:OrchardCore.HealthChecks.Models.HealthCheckResponse"/>.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.HealthChecks.Models.HealthCheckEntry.Name">
+            <summary>
+            Gets or sets the health check name.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.HealthChecks.Models.HealthCheckEntry.Status">
+            <summary>
+            Gets or sets the health check status.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.HealthChecks.Models.HealthCheckEntry.Description">
+            <summary>
+            Gets or sets the health check description.
+            </summary>
+        </member>
+        <member name="T:OrchardCore.HealthChecks.Models.HealthCheckResponse">
+            <summary>
+            Represents a health check response to be displayed in the JSON result when the health checks endpoint hit.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.HealthChecks.Models.HealthCheckResponse.Status">
+            <summary>
+            Gets or sets the overall health checks status.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.HealthChecks.Models.HealthCheckResponse.Duration">
+            <summary>
+            Gets or sets the overall health checks duration.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.HealthChecks.Models.HealthCheckResponse.HealthChecks">
+            <summary>
+            Gets or sets the health check entries.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchardCore.Email.Core</name>
+    </assembly>
+    <members>
+        <member name="P:OrchardCore.Email.Core.Services.EmailProviderOptions.Providers">
+            <summary>
+            This read-only collections contains all registered email providers.
+            The 'Key' is the technical name of the provider.
+            The 'Value' is the type of the email provider. The type will always be an implementation of <see cref="T:OrchardCore.Email.IEmailProvider"></see> interface.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Email.Core.Services.EmailProviderOptions.TryAddProvider(System.String,OrchardCore.Email.Core.Services.EmailProviderTypeOptions)">
+            <summary>
+            Adds a provider if one does not exist.
+            </summary>
+            <param name="name">The technical name of the provider.</param>
+            <param name="options">The type options of the provider.</param>
+        </member>
+        <member name="M:OrchardCore.Email.Core.Services.EmailProviderOptions.RemoveProvider(System.String)">
+            <summary>
+            Removes a provider if one exist.
+            </summary>
+            <param name="name">The technical name of the provider.</param>
+        </member>
+        <member name="M:OrchardCore.Email.Core.Services.EmailProviderOptions.ReplaceProvider(System.String,OrchardCore.Email.Core.Services.EmailProviderTypeOptions)">
+            <summary>
+            Replaces existing or adds a new provider.
+            </summary>
+            <param name="name">The technical name of the provider.</param>
+            <param name="options">The type-options of the provider.</param>
+        </member>
+    </members>
+</doc>

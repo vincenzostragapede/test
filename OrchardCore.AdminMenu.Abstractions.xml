@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchardCore.AdminMenu.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="M:OrchardCore.AdminMenu.AdminMenuExtensions.AddAdminNodeDerivedType``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers an <see cref="T:OrchardCore.AdminMenu.Models.AdminNode"/> implementation with JSON serialization.
+            </summary>
+            <typeparam name="T">The type to register.</typeparam>
+            <param name="services">The service collection.</param>
+        </member>
+    </members>
+</doc>

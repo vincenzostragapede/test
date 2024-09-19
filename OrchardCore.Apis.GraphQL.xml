@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchardCore.Apis.GraphQL</name>
+    </assembly>
+    <members>
+        <member name="P:OrchardCore.Apis.GraphQL.GraphQLNamedQueryRequest.NamedQuery">
+            <summary>
+            Used to store some graphql query on the server, and then the client only needs to submit the name of that query to reduce the size of the network request
+            <see cref="T:OrchardCore.Apis.GraphQL.Queries.INamedQueryProvider"/>
+            </summary>
+        </member>
+        <member name="F:OrchardCore.Apis.GraphQL.Json.GraphQLNamedQueryRequestJsonConverter._operationNameKey">
+            <summary>
+            Name for the operation name parameter.
+            See https://github.com/graphql/graphql-over-http/blob/master/spec/GraphQLOverHTTP.md#request-parameters.
+            </summary>
+        </member>
+        <member name="F:OrchardCore.Apis.GraphQL.Json.GraphQLNamedQueryRequestJsonConverter._queryKey">
+            <summary>
+            Name for the query parameter.
+            See https://github.com/graphql/graphql-over-http/blob/master/spec/GraphQLOverHTTP.md#request-parameters.
+            </summary>
+        </member>
+        <member name="F:OrchardCore.Apis.GraphQL.Json.GraphQLNamedQueryRequestJsonConverter._variablesKey">
+            <summary>
+            Name for the variables parameter.
+            See https://github.com/graphql/graphql-over-http/blob/master/spec/GraphQLOverHTTP.md#request-parameters.
+            </summary>
+        </member>
+        <member name="F:OrchardCore.Apis.GraphQL.Json.GraphQLNamedQueryRequestJsonConverter._extensionsKey">
+            <summary>
+            Name for the extensions parameter.
+            See https://github.com/graphql/graphql-over-http/blob/master/spec/GraphQLOverHTTP.md#request-parameters.
+            </summary>
+        </member>
+        <member name="F:OrchardCore.Apis.GraphQL.Json.GraphQLNamedQueryRequestJsonConverter._namedQueryKey">
+            <summary>
+            Name for the namedQuery parameter.
+            </summary>
+        </member>
+    </members>
+</doc>

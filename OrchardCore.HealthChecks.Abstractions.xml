@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchardCore.HealthChecks.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:OrchardCore.HealthChecks.HealthChecksOptions">
+            <summary>
+            Represents options for health checks.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.HealthChecks.HealthChecksOptions.Url">
+            <summary>
+            Gets or sets the health check URL. Default to "/health/live".
+            </summary>
+        </member>
+        <member name="P:OrchardCore.HealthChecks.HealthChecksOptions.ShowDetails">
+            <summary>
+            Gets or sets a value indicating whether to show the detailed information (name, status and description) for the checks dependency or not. Defaults to <see langword="false"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

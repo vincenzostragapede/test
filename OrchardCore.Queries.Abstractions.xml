@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchardCore.Queries.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="M:OrchardCore.Queries.Core.IQueryHandler.InitializingAsync(OrchardCore.Queries.InitializingQueryContext)">
+            <summary>
+            This method in invoked during query initializing.
+            </summary>
+            <param name="context">An instance of <see cref="T:OrchardCore.Queries.InitializingQueryContext"/>.</param>
+        </member>
+        <member name="M:OrchardCore.Queries.Core.IQueryHandler.InitializedAsync(OrchardCore.Queries.InitializedQueryContext)">
+            <summary>
+            This method in invoked after the query was initialized.
+            </summary>
+            <param name="context">An instance of <see cref="T:OrchardCore.Queries.InitializedQueryContext"/>.</param>
+        </member>
+        <member name="M:OrchardCore.Queries.Core.IQueryHandler.LoadedAsync(OrchardCore.Queries.LoadedQueryContext)">
+            <summary>
+            This method in invoked after the query was loaded from the store.
+            </summary>
+            <param name="context">An instance of <see cref="T:OrchardCore.Queries.LoadedQueryContext"/>.</param>
+        </member>
+        <member name="M:OrchardCore.Queries.Core.IQueryHandler.DeletingAsync(OrchardCore.Queries.DeletingQueryContext)">
+            <summary>
+            This method in invoked before the query is removed from the store.
+            </summary>
+            <param name="context">An instance of <see cref="T:OrchardCore.Queries.LoadedQueryContext"/>.</param>
+        </member>
+        <member name="M:OrchardCore.Queries.Core.IQueryHandler.DeletedAsync(OrchardCore.Queries.DeletedQueryContext)">
+            <summary>
+            This method in invoked after the query was removed from the store.
+            </summary>
+            <param name="context">An instance of <see cref="T:OrchardCore.Queries.DeletedQueryContext"/>.</param>
+        </member>
+        <member name="M:OrchardCore.Queries.Core.IQueryHandler.UpdatingAsync(OrchardCore.Queries.UpdatingQueryContext)">
+            <summary>
+            This method in invoked before the query is updated.
+            </summary>
+            <param name="context">An instance of <see cref="T:OrchardCore.Queries.UpdatingQueryContext"/>.</param>
+        </member>
+        <member name="M:OrchardCore.Queries.Core.IQueryHandler.UpdatedAsync(OrchardCore.Queries.UpdatedQueryContext)">
+            <summary>
+            This method in invoked after the query is updated.
+            </summary>
+            <param name="context">An instance of <see cref="T:OrchardCore.Queries.UpdatedQueryContext"/>.</param>
+        </member>
+        <member name="M:OrchardCore.Queries.IQueryManager.NewAsync(System.String,System.Text.Json.Nodes.JsonNode)">
+            <summary>
+            Gets a new instance of <see cref="T:OrchardCore.Queries.Query"/> for the given source if a valid source is given.
+            </summary>
+            <returns>A new instance of <see cref="T:OrchardCore.Queries.Query"/>.</returns>
+        </member>
+        <member name="M:OrchardCore.Queries.IQueryManager.UpdateAsync(OrchardCore.Queries.Query,System.Text.Json.Nodes.JsonNode)">
+            <summary>
+            Updated the Query using the given data and saves it into the store.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Queries.IQueryManager.DeleteQueryAsync(System.String[])">
+            <summary>
+            Deletes the specified <see cref="T:OrchardCore.Queries.Query"/>.
+            </summary>
+            <param name="name">The name of the query to delete.</param>
+            <returns>True if deleted, false otherwise.</returns>
+        </member>
+        <member name="M:OrchardCore.Queries.IQueryManager.GetQueryAsync(System.String)">
+            <summary>
+            Gets the <see cref="T:OrchardCore.Queries.Query"/> instance with the specified name in read-only.
+            </summary>
+            <param name="name">The name of the query.</param>
+            <returns>The found query if any, otherwise null.</returns>
+        </member>
+        <member name="M:OrchardCore.Queries.IQueryManager.ExecuteQueryAsync(OrchardCore.Queries.Query,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Executes a query.
+            </summary>
+            <param name="query">The query to execute.</param>
+            <param name="parameters">The parameters for the query.</param>
+            <returns>The result of the query.</returns>
+        </member>
+        <member name="M:OrchardCore.Queries.IQueryManager.GetIdentifierAsync">
+            <summary>
+            Returns an unique identifier that is updated when queries have changed.
+            </summary>
+            <returns>A unique string identifier represent all the queries.</returns>
+        </member>
+        <member name="M:OrchardCore.Queries.IQueryManager.ListQueriesAsync(OrchardCore.Queries.QueryContext)">
+            <summary>
+            Gets a list of stored <see cref="T:OrchardCore.Queries.Query"/> that match the given context.
+            </summary>
+            <param name="context">The context provides a way to filter the returned dataset.</param>
+            <returns>IEnumerable of <see cref="T:OrchardCore.Queries.Query"/> type.</returns>
+        </member>
+        <member name="M:OrchardCore.Queries.IQueryManager.PageQueriesAsync(System.Int32,System.Int32,OrchardCore.Queries.QueryContext)">
+            <summary>
+            Gets a paged list of stored <see cref="T:OrchardCore.Queries.Query"/> that match the given context.
+            </summary>
+            <param name="page">The page number to return.</param>
+            <param name="pageSize">The page size to return.</param>
+            <param name="context">The context provides a way to filter the returned dataset.</param>
+            <returns>An instance of <see cref="T:OrchardCore.Queries.ListQueryResult"/>.</returns>
+        </member>
+        <member name="M:OrchardCore.Queries.IQueryManager.SaveAsync(OrchardCore.Queries.Query[])">
+            <summary>
+            Saves the given queries to the store.
+            </summary>
+            <param name="queries">One or more instances of <see cref="T:OrchardCore.Queries.Query"/> to save.</param>
+        </member>
+        <member name="T:OrchardCore.Queries.IQueryResults">
+            <summary>
+            Contracts for query results.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Queries.IQueryResults.Items">
+            <summary>
+            Gets or sets the query items.
+            </summary>
+        </member>
+        <member name="T:OrchardCore.Queries.IQuerySource">
+            <summary>
+            Contract for query data source.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Queries.IQuerySource.Name">
+            <summary>
+            Gets the name of query source.
+            </summary>
+        </member>
+        <member name="M:OrchardCore.Queries.IQuerySource.ExecuteQueryAsync(OrchardCore.Queries.Query,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Executes a query with a given parameters.
+            </summary>
+            <param name="query">The <see cref="T:OrchardCore.Queries.Query"/> to be executed.</param>
+            <param name="parameters">The query parameters.</param>
+        </member>
+        <member name="T:OrchardCore.Queries.Query">
+            <summary>
+            Represents a query.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Queries.Query.Name">
+            <summary>
+            Gets or sets the technical name of the query.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Queries.Query.Source">
+            <summary>
+            Gets the name of the source for this query.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Queries.Query.Schema">
+            <summary>
+            Gets or sets the return schema of the query.
+            This is used runtime determination of the results returned when Content Items are not returned.
+            </summary>
+        </member>
+    </members>
+</doc>

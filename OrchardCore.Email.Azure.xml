@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchardCore.Email.Azure</name>
+    </assembly>
+    <members>
+        <member name="T:OrchardCore.Email.Azure.AzureEmailSettings">
+            <summary>
+            Represents a settings for Azure email.
+            </summary>
+        </member>
+        <member name="P:OrchardCore.Email.Azure.AzureEmailSettings.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+        </member>
+    </members>
+</doc>
